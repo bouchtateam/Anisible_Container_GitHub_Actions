@@ -82,8 +82,8 @@ override_python_packages() {
 # env:
 #   [required] TARGETS : Files or directories (i.e., playbooks, tasks, handlers etc..) to be linted
 ansible::lint() {
-  : "${TARGETS?No targets to check. Nothing to do.}"
-  : "${GITHUB_WORKSPACE?GITHUB_WORKSPACE has to be set. Did you use the actions/checkout action?}"
+#   : "${TARGETS?No targets to check. Nothing to do.}"
+#   : "${GITHUB_WORKSPACE?GITHUB_WORKSPACE has to be set. Did you use the actions/checkout action?}"
   pushd "${GITHUB_WORKSPACE}"
 
   override_python_packages
